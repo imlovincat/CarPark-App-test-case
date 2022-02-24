@@ -1090,4 +1090,90 @@ class RateTestTask {
         Period periodStay = new Period(0,1);
         System.out.println(rate.calculate(periodStay));
     }
+
+    /**
+     * Testcase #41
+     * BigDecimal hourlyNormalRate = 999999999
+     * Period periodStay = new Period(0,24);
+     * Partition: startHour >= 0 && startHour <= 24, and
+     *            endHour >= 0 && endHour <= 24, then
+     *            startHour < endHour
+     * expect: return 0
+     */
+    @Test
+    public void testcase41() throws IllegalAccessException {
+        //percondition
+        CarParkKind kind = new CarParkKind("STUDENT");
+        BigDecimal hourlyNormalRate = new BigDecimal(999999999);
+        BigDecimal hourlyReducedRate = new BigDecimal(0);
+        Period r1 = new Period(0,1);
+        Period n1 = new Period(23,24);
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        reducedPeriods.add(r1);
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        normalPeriods.add(n1);
+        Rate rate = new Rate(kind,hourlyNormalRate,hourlyReducedRate,reducedPeriods,normalPeriods);
+
+        //test calculate()
+        Period periodStay = new Period(0,24);
+        System.out.println(rate.calculate(periodStay));
+    }
+
+    /**
+     * Testcase #42
+     * BigDecimal hourlyNormalRate = 999999999*999999999
+     * Period periodStay = new Period(0,24);
+     * Partition: startHour >= 0 && startHour <= 24, and
+     *            endHour >= 0 && endHour <= 24, then
+     *            startHour < endHour
+     * expect: return 9.99999998e+17
+     * actual: return 808348673
+     */
+    @Test
+    public void testcase42() throws IllegalAccessException {
+        //percondition
+        CarParkKind kind = new CarParkKind("STUDENT");
+        BigDecimal hourlyNormalRate = new BigDecimal(999999999*999999999);
+        BigDecimal hourlyReducedRate = new BigDecimal(0);
+        Period r1 = new Period(0,1);
+        Period n1 = new Period(23,24);
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        reducedPeriods.add(r1);
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        normalPeriods.add(n1);
+        Rate rate = new Rate(kind,hourlyNormalRate,hourlyReducedRate,reducedPeriods,normalPeriods);
+
+        //test calculate()
+        Period periodStay = new Period(0,24);
+        System.out.println(rate.calculate(periodStay));
+    }
+
+    /**
+     * Testcase #43
+     * BigDecimal hourlyNormalRate = 999999999*999999999*999999999
+     * Period periodStay = new Period(0,24);
+     * Partition: startHour >= 0 && startHour <= 24, and
+     *            endHour >= 0 && endHour <= 24, then
+     *            startHour < endHour
+     * expect: return incalculable numbers
+     * actual: Error
+     */
+    @Test
+    public void testcase43() throws IllegalAccessException {
+        //percondition
+        CarParkKind kind = new CarParkKind("STUDENT");
+        BigDecimal hourlyNormalRate = new BigDecimal(999999999*999999999*999999999);
+        BigDecimal hourlyReducedRate = new BigDecimal(0);
+        Period r1 = new Period(0,1);
+        Period n1 = new Period(23,24);
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        reducedPeriods.add(r1);
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        normalPeriods.add(n1);
+        Rate rate = new Rate(kind,hourlyNormalRate,hourlyReducedRate,reducedPeriods,normalPeriods);
+
+        //test calculate()
+        Period periodStay = new Period(0,24);
+        System.out.println(rate.calculate(periodStay));
+    }
 }
