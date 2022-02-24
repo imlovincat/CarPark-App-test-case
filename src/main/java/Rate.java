@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rate {
-
     //private CarParkKind kind;
     private CarParkKind kind;
     private BigDecimal hourlyNormalRate;
@@ -13,12 +12,17 @@ public class Rate {
 
     public Rate(CarParkKind kind,BigDecimal hourlyNormalRate,BigDecimal hourlyReducedRate,ArrayList<Period> reducedPeriods,ArrayList<Period> normalPeriods) {
 
+        //all parameters can not be "null"
+        if (kind == null || hourlyNormalRate == null || hourlyReducedRate == null || reducedPeriods == null || normalPeriods ==null) {
+            throw new IllegalArgumentException("error in no value can be null");
+        }
+
          //the normalRate and reducedRate are greater or equal to 0
         if (hourlyNormalRate.compareTo(BigDecimal.ZERO) < 0 || hourlyReducedRate.compareTo(BigDecimal.ZERO) < 0) {
             throw new IllegalArgumentException("error in Rate (less than 0)");
         }
         //the normalRate has to be greater or equal to the reducedRate
-        if (hourlyNormalRate.compareTo(hourlyReducedRate) > 0) {
+        if (hourlyNormalRate.compareTo(hourlyReducedRate) < 0) {
             throw new IllegalArgumentException("error in Rate (Normal Rate is less than Reduced Rate");
         }
         //inv LegalValues: self.startHour >= 0 and self.startHour <= 24 and self.endHour >= 0 and self.endHour <= 24
@@ -26,6 +30,16 @@ public class Rate {
         for (int i = 0; i < reducedPeriods.size(); i++) {
             int startHour = reducedPeriods.get(i).startHour;
             int endHour = reducedPeriods.get(i).endHour;
+            if (!(startHour >= 0 && startHour <=24 && endHour >= 0 && endHour <= 24)) {
+                throw new IllegalArgumentException("error in Period (LegalValues)");
+            }
+            if (!(startHour < endHour)) {
+                throw new IllegalArgumentException("error in Period (PositiveDuration)");
+            }
+        }
+        for (int i = 0; i < normalPeriods.size(); i++) {
+            int startHour = normalPeriods.get(i).startHour;
+            int endHour = normalPeriods.get(i).endHour;
             if (!(startHour >= 0 && startHour <=24 && endHour >= 0 && endHour <= 24)) {
                 throw new IllegalArgumentException("error in Period (LegalValues)");
             }
@@ -71,11 +85,6 @@ public class Rate {
                 for (int k = this.reducedPeriods.get(j).startHour; k < this.reducedPeriods.get(j).endHour; k++) {
                     if (k == i) {
                         cost = cost.add(this.hourlyReducedRate);
-
-                        System.out.println("PeriodStay start Hour: " + i );
-                        System.out.println("reducedPeriods Array: " + j );
-                        System.out.println("reducedPeriods start Hour: " + j );
-                        System.out.println("cost: " + cost );
                     }
                 }
             }
@@ -84,10 +93,6 @@ public class Rate {
                 for (int k = this.normalPeriods.get(j).startHour; k < this.normalPeriods.get(j).endHour; k++) {
                     if (k == i) {
                         cost = cost.add(this.hourlyNormalRate);
-                        System.out.println("PeriodStay start Hour: " + i );
-                        System.out.println("normalPeriods Array: " + j );
-                        System.out.println("normalPeriods start Hour: " + j );
-                        System.out.println("cost: " + cost );
                     }
                 }
             }

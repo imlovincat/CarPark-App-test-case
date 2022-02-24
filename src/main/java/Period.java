@@ -4,8 +4,21 @@ public class Period {
     final public int endHour;
 
     public Period(int startHour, int endHour) {
-        this.startHour = startHour;
-        this.endHour = endHour;
+
+        /**
+         * OCL expression
+         * context Period
+         * inv LegalValues: self.startHour >= 0 and self.startHour <= 24 and self.endHour >= 0 and self.endHour <= 24
+         * inv PositiveDuration: self.startHour < self.endHour
+         */
+
+        if (startHour >= 0 && startHour <= 24 && endHour >= 0 && endHour <= 24 && startHour < endHour) {
+            this.startHour = startHour;
+            this.endHour = endHour;
+        }
+        else {
+            throw new IllegalArgumentException("period class error");
+        }
     };
 
     public int duration() {
