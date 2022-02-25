@@ -1,7 +1,9 @@
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+/**
+ * Chi Ieong Ng C00223421
+ * Date: 25/02/2022
+ */
 
+import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
@@ -15,7 +17,7 @@ class RateTestTask {
      */
     @Test
     public void testcase1() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(-1);
         Period r1 = new Period(5,9);
@@ -41,7 +43,7 @@ class RateTestTask {
      */
     @Test
     public void testcase2() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(-20);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -68,7 +70,7 @@ class RateTestTask {
      */
     @Test
     public void testcase3() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STAFF");
+        CarParkKind kind = CarParkKind.STAFF;
         BigDecimal hourlyNormalRate = new BigDecimal(0);
         BigDecimal hourlyReducedRate = new BigDecimal(0);
         Period r1 = new Period(5,9);
@@ -95,7 +97,7 @@ class RateTestTask {
      */
     @Test
     public void testcase4() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("MANAGEMENT");
+        CarParkKind kind = CarParkKind.MANAGEMENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -122,7 +124,7 @@ class RateTestTask {
      */
     @Test
     public void testcase5() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(1);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -149,7 +151,7 @@ class RateTestTask {
      */
     @Test
     public void testcase6() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("VISITOR");
+        CarParkKind kind = CarParkKind.VISITOR;
         BigDecimal hourlyReducedRate = new BigDecimal(1);
         BigDecimal hourlyNormalRate = new BigDecimal(1);
         Period r1 = new Period(5,9);
@@ -175,7 +177,7 @@ class RateTestTask {
      */
     @Test
     public void testcase7() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(-1,3);
@@ -197,7 +199,7 @@ class RateTestTask {
      */
     @Test
     public void testcase8() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(3.1);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -223,7 +225,7 @@ class RateTestTask {
      */
     @Test
     public void testcase9() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -246,7 +248,7 @@ class RateTestTask {
      */
     @Test
     public void testcase10() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(22,25);
@@ -267,7 +269,7 @@ class RateTestTask {
      */
     @Test
     public void testcase11() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -290,7 +292,7 @@ class RateTestTask {
      */
     @Test
     public void testcase12() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = null;
@@ -313,7 +315,7 @@ class RateTestTask {
      */
     @Test
     public void testcase13() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -336,7 +338,7 @@ class RateTestTask {
      */
     @Test
     public void testcase14() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,5);
@@ -361,7 +363,7 @@ class RateTestTask {
      */
     @Test
     public void testcase15() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -386,7 +388,7 @@ class RateTestTask {
      */
     @Test
     public void testcase16() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -409,7 +411,7 @@ class RateTestTask {
      */
     @Test
     public void testcase17() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -433,7 +435,7 @@ class RateTestTask {
      */
     @Test
     public void testcase18() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -459,7 +461,7 @@ class RateTestTask {
      */
     @Test
     public void testcase19() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -495,7 +497,7 @@ class RateTestTask {
      */
     @Test
     public void testcase20() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STAFF");
+        CarParkKind kind = CarParkKind.STAFF;
         BigDecimal hourlyNormalRate = new BigDecimal(99);
         BigDecimal hourlyReducedRate = new BigDecimal(0);
         Period r1 = new Period(0,9);
@@ -527,7 +529,7 @@ class RateTestTask {
      */
     @Test
     public void testcase21() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("MANAGEMENT");
+        CarParkKind kind = CarParkKind.MANAGEMENT;
         BigDecimal hourlyNormalRate = new BigDecimal(0.99999999999999999999999999999999999999999);
         BigDecimal hourlyReducedRate = new BigDecimal(0);
         Period r1 = new Period(0,9);
@@ -586,7 +588,7 @@ class RateTestTask {
      */
     @Test
     public void testcase23() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("VISITOR");
+        CarParkKind kind = CarParkKind.VISITOR;
         BigDecimal hourlyNormalRate = new BigDecimal(999999999);
         BigDecimal hourlyReducedRate = new BigDecimal(0);
         Period r1 = new Period(0,9);
@@ -618,7 +620,7 @@ class RateTestTask {
      */
     @Test
     public void testcase24() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("VISITOR");
+        CarParkKind kind = CarParkKind.VISITOR;
         BigDecimal hourlyNormalRate = new BigDecimal(999999999*999999999);
         BigDecimal hourlyReducedRate = new BigDecimal(0);
         Period r1 = new Period(0,9);
@@ -643,7 +645,7 @@ class RateTestTask {
      */
     @Test
     public void testcase25() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("VISITOR");
+        CarParkKind kind = CarParkKind.VISITOR;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = null;
         Period r1 = new Period(0,9);
@@ -691,9 +693,10 @@ class RateTestTask {
      * Partition: Kind == “STAFF” or “STUDENT” or  “MANAGEMENT”,” or “VISITOR”
      * @throws IllegalAccessException
      */
+    /*
     @Test
     public void testcase27() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("staff");
+        CarParkKind kind = CarParkKind.staff;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -709,16 +712,17 @@ class RateTestTask {
         normalPeriods.add(n1);
         normalPeriods.add(n2);
         Rate rate = new Rate(kind,hourlyNormalRate,hourlyReducedRate,reducedPeriods,normalPeriods);
-    }
+    }*/
     /**
      * Testcase #28
      * CarParkKind kind = "STUDENT" + 1
      * Partition: Kind == “STAFF” or “STUDENT” or  “MANAGEMENT”,” or “VISITOR”
      * @throws IllegalAccessException
      */
+    /*
     @Test
     public void testcase28() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT" + 1);
+        CarParkKind kind = CarParkKind.STUDENT + 1;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period r1 = new Period(5,9);
@@ -734,7 +738,7 @@ class RateTestTask {
         normalPeriods.add(n1);
         normalPeriods.add(n2);
         Rate rate = new Rate(kind,hourlyNormalRate,hourlyReducedRate,reducedPeriods,normalPeriods);
-    }
+    }*/
 
     /**
      * Testcase #29
@@ -752,13 +756,14 @@ class RateTestTask {
     }
     /**
      * Testcase #30
-     * CarParkKind kind = null
-     * Partition: Kind == “STAFF” or “STUDENT” or  “MANAGEMENT”,” or “VISITOR”
+     *  ArrayList<Period> reducedPeriods = null
+     * Partition: startHour >= 0 && startHour <= 24
+     *            endHour >= 0 && endHour <= 24
      * @throws IllegalAccessException
      */
     @Test
     public void testcase30() throws IllegalAccessException {
-        CarParkKind kind = new CarParkKind("STUDENT" + 1);
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(3);
         Period n1 = new Period(9,13);
@@ -769,8 +774,6 @@ class RateTestTask {
         normalPeriods.add(n2);
         Rate rate = new Rate(kind,hourlyNormalRate,hourlyReducedRate,reducedPeriods,normalPeriods);
     }
-
-
 
     /**
      * Testcase #31
@@ -783,7 +786,7 @@ class RateTestTask {
     @Test
     public void testcase31() throws IllegalAccessException {
         //precondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -814,7 +817,7 @@ class RateTestTask {
     @Test
     public void testcase32() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -844,7 +847,7 @@ class RateTestTask {
     @Test
     public void testcase33() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -874,7 +877,7 @@ class RateTestTask {
     @Test
     public void testcase34() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -904,7 +907,7 @@ class RateTestTask {
     @Test
     public void testcase35() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -937,7 +940,7 @@ class RateTestTask {
     @Test
     public void testcase36() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -970,7 +973,7 @@ class RateTestTask {
     @Test
     public void testcase37() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -1003,7 +1006,7 @@ class RateTestTask {
     @Test
     public void testcase38() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -1036,7 +1039,7 @@ class RateTestTask {
     @Test
     public void testcase39() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -1069,7 +1072,7 @@ class RateTestTask {
     @Test
     public void testcase40() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(5);
         BigDecimal hourlyReducedRate = new BigDecimal(2);
         Period r1 = new Period(5,9);
@@ -1103,7 +1106,7 @@ class RateTestTask {
     @Test
     public void testcase41() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(999999999);
         BigDecimal hourlyReducedRate = new BigDecimal(0);
         Period r1 = new Period(0,1);
@@ -1132,7 +1135,7 @@ class RateTestTask {
     @Test
     public void testcase42() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(999999999*999999999);
         BigDecimal hourlyReducedRate = new BigDecimal(0);
         Period r1 = new Period(0,1);
@@ -1161,7 +1164,7 @@ class RateTestTask {
     @Test
     public void testcase43() throws IllegalAccessException {
         //percondition
-        CarParkKind kind = new CarParkKind("STUDENT");
+        CarParkKind kind = CarParkKind.STUDENT;
         BigDecimal hourlyNormalRate = new BigDecimal(999999999*999999999*999999999);
         BigDecimal hourlyReducedRate = new BigDecimal(0);
         Period r1 = new Period(0,1);

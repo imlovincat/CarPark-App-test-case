@@ -1,18 +1,8 @@
-public class CarParkKind {
+/**
+ * Chi Ieong Ng C00223421
+ * Date: 25/02/2022
+ */
 
-    private String kind;
-
-    public CarParkKind(String kind) {
-
-        if (kind.equals("STAFF") || kind.equals("STUDENT") || kind.equals("MANAGEMENT") || kind.equals("VISITOR")) {
-            this.kind = kind;
-        }
-        else {
-            throw new IllegalArgumentException("CarParkKind class error");
-        }
-    }
-
-    public String toString() {
-        return kind;
-    }
+public enum CarParkKind {
+    STAFF, STUDENT, MANAGEMENT, VISITOR
 }

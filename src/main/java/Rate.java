@@ -1,6 +1,10 @@
+/**
+ * Chi Ieong Ng C00223421
+ * Date: 25/02/2022
+ */
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Rate {
     //private CarParkKind kind;

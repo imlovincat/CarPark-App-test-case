@@ -1,3 +1,9 @@
+/**
+ * Chi Ieong Ng C00223421
+ * Date: 25/02/2022
+ */
+
+
 public class Period {
 
     final public int startHour;
