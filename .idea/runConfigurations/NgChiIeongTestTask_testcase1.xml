@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="NgChiIeongTestTask.testcase1" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="TestTask" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="cm.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="cm" />
+    <option name="MAIN_CLASS_NAME" value="cm.NgChiIeongTestTask" />
+    <option name="METHOD_NAME" value="testcase1" />
+    <option name="TEST_OBJECT" value="method" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

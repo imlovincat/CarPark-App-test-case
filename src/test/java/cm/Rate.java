@@ -3,6 +3,7 @@
  * Date: 25/02/2022
  */
 
+package cm;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
@@ -14,14 +15,15 @@ public class Rate {
     private ArrayList<Period> reducedPeriods;
     private ArrayList<Period> normalPeriods;
 
-    public Rate(CarParkKind kind,BigDecimal hourlyNormalRate,BigDecimal hourlyReducedRate,ArrayList<Period> reducedPeriods,ArrayList<Period> normalPeriods) {
+    public Rate(CarParkKind kind, BigDecimal hourlyNormalRate, BigDecimal hourlyReducedRate, ArrayList<Period> reducedPeriods, ArrayList<Period> normalPeriods) {
 
         //all parameters can not be "null"
-        if (kind == null || hourlyNormalRate == null || hourlyReducedRate == null || reducedPeriods == null || normalPeriods ==null) {
+        /*if (kind == null || hourlyNormalRate == null || hourlyReducedRate == null || reducedPeriods == null || normalPeriods ==null) {
             throw new IllegalArgumentException("error in no value can be null");
-        }
+        }*/
 
-         //the normalRate and reducedRate are greater or equal to 0
+
+        //the normalRate and reducedRate are greater or equal to 0
         if (hourlyNormalRate.compareTo(BigDecimal.ZERO) < 0 || hourlyReducedRate.compareTo(BigDecimal.ZERO) < 0) {
             throw new IllegalArgumentException("error in Rate (less than 0)");
         }
