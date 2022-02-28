@@ -80,7 +80,7 @@ public class Rate {
         BigDecimal cost = new BigDecimal("0.00");
 
         for (int i = periodStay.startHour; i < periodStay.endHour; i++) {
-            //reducedPeroids and reducedRates calculations
+            //reducedPeriods and reducedRates calculations
             for (int j = 0; j < this.reducedPeriods.size(); j++) {
                 for (int k = this.reducedPeriods.get(j).startHour; k < this.reducedPeriods.get(j).endHour; k++) {
                     if (k == i) {
@@ -88,7 +88,7 @@ public class Rate {
                     }
                 }
             }
-            //normalPeroids and normalRates calculations
+            //normalPeriods and normalRates calculations
             for (int j = 0; j < this.normalPeriods.size(); j++) {
                 for (int k = this.normalPeriods.get(j).startHour; k < this.normalPeriods.get(j).endHour; k++) {
                     if (k == i) {
