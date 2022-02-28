@@ -30,7 +30,7 @@ public class Period {
 
     public int duration() {
         //because of the rule startHour < endHour
-        //so it will not count for if parking past from 23:59:59 to 00:00:00 or more
+        //so it will not count for if parking past from 23:59:59 to 00:00:01 or more
         //example start time at 23:00 and end time at 07:00, it is not valid
         return endHour - startHour;
     };
