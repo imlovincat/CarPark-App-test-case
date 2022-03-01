@@ -77,7 +77,7 @@ public class Rate {
 
     public BigDecimal calculate(Period periodStay) {
 
-        BigDecimal cost = new BigDecimal("0.00");
+        BigDecimal cost = new BigDecimal(0);
 
         for (int i = periodStay.startHour; i < periodStay.endHour; i++) {
             //reducedPeriods and reducedRates calculations
